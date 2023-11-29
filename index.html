@@ -7,19 +7,57 @@
     <title>Cloud Sheet</title>
 </head>
 <body>
+    <h1>Cloud Sheet</h1>
     <div class="top-nav">
-        <p>This is an Top Navbar</p>
+        <button id="boldBtn">B</button>
+        <button id="italicBtn">I</button>
+        <button id="underline"><u>U</u></button>
+        <select id="fontFamily">
+            <option value="Sans-serif">Sans-serif</option>
+            <option value="Monospace">Monospace</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Cursive">Cursive</option>
+        </select>
+        <select id="fontSize">
+            <option value="18px">18</option>
+            <option value="20px">20</option>
+            <option value="22px">22</option>
+            <option value="24px">24</option>
+            <option value="26px">26</option>
+            <option value="28px">28</option>
+            <option value="30px">30</option>
+            <option value="32px">32</option>
+        </select>
+        <button id="left-align">&#8592</button>
+        <button id="right-align">&#8594</button>
+        <button id="center-align">C</button>
+        <button id="reset">Reset</button>
+        <p>Font color:<input type="color" value="#000000" id="fontColor"/></p>
+        <p>Background color:<input type="color" value="#ffffff" id="background"/></p>
+        <div id="cellOperations">
+            <p>Cell Operations:</p>
+            <span>
+            <button id="cut">&#10006;</button>
+            <button id="copy">&#10064;</button>
+            <button id="paste">&#9989;</button>
+            </span>
+        </div>
+        <button id="download"><u>Download</u></button>
+        <div class="globalSearch">
+            <input placeholder="Find.." id="find" /> <!--This is for the Find an Element-->
+            <input placeholder="Replace.." id="replace"/><!--This is for the Replacing the Element-->
+        </div>
     </div>
 
     <div class="sheet-operations">
-        <p>This is an Sheet Operations</p>
+        <p>This Div belongs to Sheet Operations</p>
     </div>
     <div class="viewport">
         <!--This div belongs to the Viewing and Displaying of the Spreadsheet-->
         <table id="sheet">
             <thead>
                 <tr id="row-heading">
-                    <th></th>
+                    <th id="currentCell">No Cell</th>
                 </tr>
             </thead>
             <tbody id="tableBody">
